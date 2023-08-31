@@ -1,13 +1,21 @@
+.wrapper {
+  background-color: #323135;
+  height: 100vh;
+  color: #555555;
+}
+
 li {
   list-style-type: none;
   text-align: left;
+  background-color: whitesmoke;
+  border-radius: 5px;
 }
 
 .strikethrough-text {
   text-decoration: line-through;
 }
 
-.delete-action {
+.marked-action {
   float: right;
   cursor: pointer;
 }
