@@ -14,7 +14,7 @@ done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 
 ### MILESTONE 2
 
-- Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
+- Visualizzare a fianco ad ogni item una "x": cliccando su di essa, il todo viene rimosso dalla lista.
 
 ### MILESTONE 3
 
@@ -35,4 +35,9 @@ done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 
 - Creo un tag lista e:
   - **PER OGNI** oggetto della lista lo inserisco in un tag
-  - **SE** l'oggetto è stato fatto, aggiungo una classe specifica per farla apparire barrata
+  - **SE** l'oggetto (to-do) è stato completato, aggiungo una classe specifica per farla apparire barrata
+
+### Milestone 2
+
+- **PER OGNI** oggetto creato aggiungo anche una "X"
+- **AL CLICK** della "X" elimino l'oggetto dalla lista degli oggetti
