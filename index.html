@@ -30,13 +30,31 @@
     <div class="wrapper" id="app">
       <div class="container text-center">
         <h1>Vue To Do List</h1>
+        <div class="input-group mb-4 w-25 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Cosa vuoi fare?"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+            v-model="newToDo.text"
+          />
+          <button
+            v-on:click="addNewToDo()"
+            class="btn btn-primary"
+            type="button"
+            id="button-addon2"
+          >
+            Aggiungi
+          </button>
+        </div>
         <ul>
           <li
             v-for="(to, index) in toDo"
             :class="(to.done==true) ? 'strikethrough-text' : ''"
           >
             {{to.text}}
-            <span class="delete-action"
+            <span class="marked-action"
               ><i class="fa-solid fa-xmark" v-on:click="deleteToDo(index)"></i
             ></span>
           </li>
