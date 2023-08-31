@@ -9,18 +9,24 @@ createApp({
         { text: "Fare la spesa", done: true },
       ],
       newToDo: { text: "", done: false },
+      error: {
+        show: false,
+        message: "",
+      },
     };
   },
   methods: {
-    // function to delete toDo
-    deleteToDo(index) {
-      this.toDo.splice(index, 1);
-    },
     // function to add new toDo
     addNewToDo() {
       const newToDoCopy = { ...this.newToDo };
+      if (newToDoCopy.text.length < 5) {
+        this.error.show = true;
+        this.error.message = "Attenzione inserisci almeno 5 caratteri";
+        return;
+      }
       this.toDo.push(newToDoCopy);
       this.newToDo = {};
+      this.error.show = false;
     },
     // function to change done status
     changeStatus(index) {
@@ -29,6 +35,10 @@ createApp({
       } else {
         this.toDo[index].done = true;
       }
+    },
+    // function to delete toDo
+    deleteToDo(index) {
+      this.toDo.splice(index, 1);
     },
   },
 }).mount("#app");
