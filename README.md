@@ -51,3 +51,4 @@ done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 **Bonus**
 
 1. Aggiungo un evento al click del tasto enter quando inserisco l'input
+2. Aggiungo un evento al click del toDo per cambiare lo stato done da false a true e viceversa
