@@ -30,7 +30,7 @@
     <div class="wrapper" id="app">
       <div class="container text-center">
         <h1>Vue To Do List</h1>
-        <div class="input-group mb-4 w-25 mx-auto">
+        <div class="input-group mb-4 w-50 mx-auto">
           <input
             type="text"
             class="form-control"
@@ -50,11 +50,12 @@
         </div>
         <ul>
           <li
+            class="my-1 p-2"
             v-for="(to, index) in toDo"
             :class="(to.done==true) ? 'strikethrough-text' : ''"
           >
             {{to.text}}
-            <span class="marked-action"
+            <span class="marked-action primary text-danger"
               ><i class="fa-solid fa-xmark" v-on:click="deleteToDo(index)"></i
             ></span>
           </li>
