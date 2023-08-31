@@ -12,6 +12,7 @@ createApp({
     };
   },
   methods: {
+    // function to delete toDo
     deleteToDo(index) {
       this.toDo.splice(index, 1);
     },
