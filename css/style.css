@@ -9,6 +9,7 @@ li {
   text-align: left;
   background-color: whitesmoke;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .strikethrough-text {
