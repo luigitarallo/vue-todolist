@@ -15,10 +15,19 @@ createApp({
     deleteToDo(index) {
       this.toDo.splice(index, 1);
     },
+    // function to add new toDo
     addNewToDo() {
       const newToDoCopy = { ...this.newToDo };
       this.toDo.push(newToDoCopy);
       this.newToDo = {};
+    },
+    // function to change done status
+    changeStatus(index) {
+      if (this.toDo[index].done) {
+        this.toDo[index].done = false;
+      } else {
+        this.toDo[index].done = true;
+      }
     },
   },
 }).mount("#app");
