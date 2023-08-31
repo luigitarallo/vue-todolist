@@ -39,5 +39,5 @@ done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 
 ### Milestone 2
 
-- **PER OGNI** oggetto creato aggiungo anche una "X"
-- **AL CLICK** della "X" elimino l'oggetto dalla lista degli oggetti
+- **PER OGNI** oggetto creato aggiungo anche una "X" con un contrassegno(indice)
+- **AL CLICK** della "X" contrassegnata elimino l'oggetto dalla lista degli oggetti
