@@ -9,6 +9,7 @@ li {
 
 .delete-action {
   float: right;
+  cursor: pointer;
 }
 
 .clearfix::after {
