@@ -41,3 +41,9 @@ done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 
 - **PER OGNI** oggetto creato aggiungo anche una "X" con un contrassegno(indice)
 - **AL CLICK** della "X" contrassegnata elimino l'oggetto dalla lista degli oggetti
+
+### Milestone 3
+
+- Inserisco un campo per poter inserire il testo e aggiungo un pulsante
+- Al click del pulsante invio i dati all'elenco
+- La nuova attività viene aggiunta all'elenco principale
