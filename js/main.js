@@ -18,6 +18,7 @@ createApp({
     addNewToDo() {
       const newToDoCopy = { ...this.newToDo };
       this.toDo.push(newToDoCopy);
+      this.newToDo = {};
     },
   },
 }).mount("#app");

@@ -47,3 +47,7 @@ done, un booleano (true/false) che indica se il todo è stato fatto oppure no
 - Inserisco un campo per poter inserire il testo e aggiungo un pulsante
 - Al click del pulsante invio i dati all'elenco
 - La nuova attività viene aggiunta all'elenco principale
+
+**Bonus**
+
+1. Aggiungo un evento al click del tasto enter quando inserisco l'input

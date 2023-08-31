@@ -38,6 +38,7 @@
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
             v-model="newToDo.text"
+            v-on:keyup.enter="addNewToDo()"
           />
           <button
             v-on:click="addNewToDo()"
