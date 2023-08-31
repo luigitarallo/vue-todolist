@@ -31,6 +31,7 @@
       <div class="container text-center">
         <h1>Vue To Do List</h1>
         <div class="input-group mb-4 w-50 mx-auto">
+          <!-- Add v-on keyup enter function to add new toDo-->
           <input
             type="text"
             class="form-control"
@@ -40,6 +41,7 @@
             v-model="newToDo.text"
             v-on:keyup.enter="addNewToDo()"
           />
+          <!-- Add v-on click function to add new toDo -->
           <button
             v-on:click="addNewToDo()"
             class="btn btn-primary"
@@ -49,13 +51,18 @@
             Aggiungi
           </button>
         </div>
+        <!-- Create toDo List with v-for -->
+        <!-- Add class strikethrough through ternary operator -->
         <ul>
           <li
             class="my-1 p-2"
             v-for="(to, index) in toDo"
             :class="(to.done==true) ? 'strikethrough-text' : ''"
+            v-on:click="changeStatus(index)"
           >
+            <!-- Print object text properties  -->
             {{to.text}}
+            <!-- Add v-on click function to delete item -->
             <span class="marked-action primary text-danger"
               ><i class="fa-solid fa-xmark" v-on:click="deleteToDo(index)"></i
             ></span>
