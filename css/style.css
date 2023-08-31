@@ -6,3 +6,13 @@ li {
 .strikethrough-text {
   text-decoration: line-through;
 }
+
+.delete-action {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
