@@ -22,6 +22,14 @@
     <div class="wrapper" id="app">
       <div class="container text-center">
         <h1>Vue To Do List</h1>
+        <ul>
+          <li
+            v-for="to in toDo"
+            :class="(to.done==true) ? 'strikethrough-text' : ''"
+          >
+            {{to.text}}
+          </li>
+        </ul>
       </div>
     </div>
   </body>
