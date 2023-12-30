@@ -3,11 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      toDo: [
-        { text: "Pagare le bollette", done: true },
-        { text: "Dar da mangiare al pesce rosso", done: false },
-        { text: "Fare la spesa", done: true },
-      ],
+      toDo: [],
       newToDo: { text: "", done: false },
       error: {
         show: false,
@@ -16,7 +12,7 @@ createApp({
     };
   },
   methods: {
-    // function to add new toDo
+    // * Function to add new toDo
     addNewToDo() {
       const newToDoCopy = { ...this.newToDo };
       if (newToDoCopy.text.length < 5) {
@@ -28,15 +24,19 @@ createApp({
       this.newToDo = {};
       this.error.show = false;
     },
-    // function to change done status
+    // * Function to change done status
     changeStatus(index) {
-      if (this.toDo[index].done) {
-        this.toDo[index].done = false;
-      } else {
-        this.toDo[index].done = true;
-      }
+      this.toDo[index].done = !this.toDo[index].done;
+      this.toDo.sort((a, b) => {
+        // Se done è true, metti l'elemento alla fine
+        if (a.done && !b.done) return 1;
+        // Se done è false, metti l'elemento all'inizio
+        if (!a.done && b.done) return -1;
+        // Se done è uguale, lascia invariato l'ordine
+        return 0;
+      });
     },
-    // function to delete toDo
+    // * Function to delete toDo
     deleteToDo(index) {
       this.toDo.splice(index, 1);
     },
