@@ -20,7 +20,7 @@ createApp({
         this.error.message = "Attenzione inserisci almeno 5 caratteri";
         return;
       }
-      this.toDo.push(newToDoCopy);
+      this.toDo.unshift(newToDoCopy);
       this.newToDo = {};
       this.error.show = false;
     },
