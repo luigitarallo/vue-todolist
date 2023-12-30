@@ -54,6 +54,7 @@ The Vue To-Do List project demonstrates the power and versatility of Vue.js in c
 
 - HTML
 - CSS
+- Google Fonts
 - Fontawesome
 - Bootstrap
 - JavaScript with Vue 3 Framework
