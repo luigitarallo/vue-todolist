@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue To Do List</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Nunito:wght@600&family=Open+Sans:wght@500&family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -28,14 +36,20 @@
   </head>
   <body>
     <div class="wrapper" id="app">
-      <div class="container text-center">
-        <h1>Vue To Do List</h1>
+      <div class="container text-center py-4">
+        <h1 class="my-4 text-white">
+          <i class="fa-regular fa-clipboard text-white mx-3"></i> ToDo List
+        </h1>
+        <p class="my-4 text-white">
+          Add what you want to do. <br />
+          Click on items to check/uncheck them.
+        </p>
         <div class="input-group mb-4 w-50 mx-auto">
           <!-- Add v-on keyup enter function to add new toDo-->
           <input
             type="text"
-            class="form-control"
-            placeholder="Cosa vuoi fare?"
+            class="form-control form-control-lg"
+            placeholder="What do you want to do today?"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
             v-model="newToDo.text"
@@ -48,7 +62,7 @@
             type="button"
             id="button-addon2"
           >
-            Aggiungi
+            Add <i class="fa-solid fa-plus ms-2"></i>
           </button>
         </div>
         <div class="d-flex justify-content-center">
@@ -59,21 +73,34 @@
         <!-- Create toDo List with v-for -->
         <!-- Add class strikethrough through ternary operator -->
         <!-- Add v-on click on li item to change status -->
-        <ul>
-          <li
-            class="my-1 p-2"
-            v-for="(to, index) in toDo"
-            :class="(to.done==true) ? 'strikethrough-text' : ''"
-            v-on:click="changeStatus(index)"
-          >
-            <!-- Print object text properties  -->
-            {{to.text}}
-            <!-- Add v-on click function to delete item -->
-            <span class="marked-action primary text-danger"
-              ><i class="fa-solid fa-xmark" v-on:click="deleteToDo(index)"></i
-            ></span>
-          </li>
-        </ul>
+        <div class="d-flex justify-content-center align-items-center">
+          <ul v-if="this.toDo.length > 0">
+            <li
+              class="my-1 p-2"
+              v-for="(to, index) in toDo"
+              :key="index"
+              :class="(to.done ? 'strikethrough-text' : '')"
+              v-on:click="changeStatus(index)"
+            >
+              <i
+                v-if="to.done"
+                class="fa-solid fa-circle-check me-2 text-success"
+              ></i>
+              <i v-else class="fa-regular fa-circle me-2"></i>
+              <!-- Print object text properties  -->
+              {{to.text}}
+              <!-- Add v-on click function to delete item -->
+              <span class="marked-action primary text-danger me-2"
+                ><i class="fa-solid fa-trash" v-on:click="deleteToDo(index)"></i
+              ></span>
+            </li>
+          </ul>
+          <div v-else>
+            <h2 class="text-opacity-50 text-white fs-1">
+              Add something to do!
+            </h2>
+          </div>
+        </div>
       </div>
     </div>
   </body>
