@@ -53,7 +53,8 @@
 - Google Fonts
 - Fontawesome
 - Bootstrap
-- JavaScript with Vue 3 Framework
+- JavaScript
+- Vue.js
 
 ## ScreenShot
 
