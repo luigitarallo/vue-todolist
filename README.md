@@ -46,10 +46,6 @@
 
 - Maintains well-commented and formatted code for improved readability, adhering to coding best practices.
 
-## In Conclusion
-
-The Vue To-Do List project demonstrates the power and versatility of Vue.js in creating interactive and responsive web applications. By combining dynamic state management, visual feedback, and a user-friendly interface, this project offers an intuitive and enjoyable task management experience.
-
 ## Technologies and Libraries
 
 - HTML
